@@ -11,22 +11,6 @@ class TreeNode(object):
         return 'TreeNode({})'.format(self.val)
 
 
-def isBalanced(root):
-    return balancedHeight(root) >= 0
-
-
-def balancedHeight(root):
-    if not root:
-        return 0
-    left = balancedHeight(root.left)
-    right = balancedHeight(root.right)
-    if left < 0 or right < 0:
-        return -1
-    if left - right > 1 or right - left > 1:
-        return -1
-    return max(left, right) + 1
-
-
 def serialize(root):
     s = []
     queue = deque([root])
