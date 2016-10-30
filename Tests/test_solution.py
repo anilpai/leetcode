@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from ReorderList.ReorderList import Solution
+from LinkedList.ReorderList import Solution
 
 class TestSolution(TestCase):
     def test_ReorderList(self):
@@ -12,7 +12,11 @@ class TestSolution(TestCase):
         self.assertListEqual(result, expected, "Both lists are equal")
 
     def test_createLinkedList(self):
-        self.fail()
+        r = Solution()
+        head = r.createLinkedList([1, 2, 3, 4])
+        self.assertEqual(head.next.next.val, 3, "Node 3 in linked list equals 3")
 
     def test_printLinkedList(self):
-        self.fail()
+        r = Solution()
+        head = r.printLinkedList(r.createLinkedList([1, 2, 3, 4]))
+        self.assertEqual(head, None, "Complete Linked List was printed")
