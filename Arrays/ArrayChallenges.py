@@ -1,5 +1,5 @@
-class Solution(object):
 
+class Solution(object):
     def flatten(self, l, a):
         for i in l:
             if isinstance(i, list):
@@ -7,7 +7,6 @@ class Solution(object):
             else:
                 a.append(i)
         return a
-
 
     def merge(self, a, b):
         i = j = k = 0
@@ -41,7 +40,6 @@ class Solution(object):
             count += 1
         return arr
 
-
     def printIntegerVertically(self, i):
         r = i % 10
         if r == 0:
@@ -50,7 +48,6 @@ class Solution(object):
             self.printIntegerVertically(int(i/10))
         print(r)
 
-
     def reverseTheInteger(self, i):
         r = 0
         while i != 0:
@@ -58,6 +55,26 @@ class Solution(object):
             r += i%10
             i = int(i/10)
         return r
+
+    def maxSubArraySum(self, a):
+        max_so_far = a[0]
+        curr_max = a[0]
+
+        currStartIndex = 0
+        maxStartIndex = 0
+        maxEndIndex = 0
+
+        for i in range(1, len(a)):
+            curr_max = max(a[i], curr_max+a[i])
+            if curr_max > max_so_far:
+                max_so_far = curr_max
+                maxStartIndex = currStartIndex
+                maxEndIndex = i
+
+            if curr_max < 0:
+                currStartIndex = i+1
+
+        print("Max SubArray starts at "+str(maxStartIndex)+ " and ends at "+ str(maxEndIndex)+" and the sum is "+str(max_so_far))
 
 
 if __name__=='__main__':
@@ -82,3 +99,5 @@ if __name__=='__main__':
     # To reverse an integer
     print(s.reverseTheInteger(12345))
 
+    s.maxSubArraySum([-2, -3, 4, -1, -2, 1, 5, -3])
+    s.maxSubArraySum([-3, -2, -1, -5])

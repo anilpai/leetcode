@@ -24,7 +24,6 @@ class Solution(object):
         '''
         return self.balancedHeight(root) >= 0
 
-
     def balancedHeight(self, root):
         '''
         :param root:

@@ -70,8 +70,6 @@ if __name__ == '__main__':
 
     ll1 = random.sample(range(300), 6)
     ll2 = random.sample(range(300), 6)
-    # ll1 = ll1.sort()
-    # ll2 = ll2.sort()
     s = Solution()
     headA = s.createLinkedList(sorted(ll1))
     headB = s.createLinkedList(sorted(ll2))
