@@ -76,6 +76,11 @@ class Solution(object):
 
         print("Max SubArray starts at "+str(maxStartIndex)+ " and ends at "+ str(maxEndIndex)+" and the sum is "+str(max_so_far))
 
+    def findMissingNumbers(self, nums):
+        for n in nums:
+            nums[abs(n) - 1] = -abs(nums[abs(n) - 1])
+        return [i + 1 for i, n in enumerate(nums) if n > 0]
+
 
 if __name__=='__main__':
     s = Solution()
@@ -101,3 +106,6 @@ if __name__=='__main__':
 
     s.maxSubArraySum([-2, -3, 4, -1, -2, 1, 5, -3])
     s.maxSubArraySum([-3, -2, -1, -5])
+
+    a = [4, 3, 2, 7, 8, 2, 3, 1]
+    print(s.findMissingNumbers(a))
