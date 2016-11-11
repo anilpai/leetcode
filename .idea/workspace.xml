@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7727d82-b3da-46bb-95ee-1d049d5102b8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BalancedBT/DoubleTree.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BalancedBT/HasPathSum.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BalancedBT/LevelOrderTraversal.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BalancedBT/SameTree.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BalancedBT/TreePathToSum.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graphs/BFS_Graph.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graphs/DFS_Graph.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graphs/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reading.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sorting/MergeSort.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sorting/QuickSort.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sorting/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Arrays/ArrayChallenges.py" afterPath="$PROJECT_DIR$/Arrays/ArrayChallenges.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="leetcode.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,12 +76,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DFS_Graph.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DFS_Graph.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Graphs/DFS_Graph.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="MarkdownFxPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="90">
+                <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -164,6 +167,7 @@
         <option value="$PROJECT_DIR$/Reading.txt" />
         <option value="$PROJECT_DIR$/Graphs/BFS_Graph.py" />
         <option value="$PROJECT_DIR$/Graphs/DFS_Graph.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -174,8 +178,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="y" value="23" />
+    <option name="x" value="22" />
+    <option name="y" value="98" />
     <option name="width" value="1226" />
     <option name="height" value="722" />
   </component>
@@ -944,7 +948,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="23" width="1226" height="722" extended-state="0" />
+    <frame x="22" y="98" width="1226" height="722" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25367048" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -988,13 +992,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LongestPath/LongestPath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TreeSerialize/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1345,6 +1342,20 @@
         <state relative-caret-position="75">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
