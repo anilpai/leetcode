@@ -58,7 +58,7 @@ if __name__=='__main__':
         [9, 10, 11, 12],
         [13, 14, 15, 16]
     ]
-
+    print(matrix)
     s.printMatrix(matrix)
     s.printMatrix(s.Rotate90Clock(matrix))
     s.printMatrix(s.Rotate90CounterClock(matrix))

@@ -1,4 +1,5 @@
 from collections import defaultdict
+from turtle import *
 
 
 class Graph(object):
@@ -32,6 +33,7 @@ class Graph(object):
                     q.append(i)
                     visited[i] = True
 
+
 if __name__=='__main__':
     g = Graph()
     g.addEdge(0, 1)
@@ -40,6 +42,5 @@ if __name__=='__main__':
     g.addEdge(2, 0)
     g.addEdge(2, 3)
     g.addEdge(3, 3)
-
     print("BFS Traversal")
     g.BFS(2)

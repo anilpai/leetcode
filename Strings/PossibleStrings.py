@@ -1,4 +1,5 @@
 class Solution(object):
+
     def printAllStringsK(self, s, prefix, n, k):
         if k == 0:
             print(prefix)
