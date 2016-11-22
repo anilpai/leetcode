@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/anilpai/leetcode.svg?branch=master)](https://travis-ci.org/anilpai/leetcode)
 [![Coverage Status](https://coveralls.io/repos/github/anilpai/leetcode/badge.svg?branch=master)](https://coveralls.io/github/anilpai/leetcode?branch=master)
-[![ghit.me](https://ghit.me/badge.svg?repo=anilpai/leetcode)](https://ghit.me/repo/anilpai/leetcode)
+[![Maintenance](https://img.shields.io/maintenance/yes/2016.svg)]()
 
 Coding Practice [ Data Structures & Algorithms using Python ]
 
