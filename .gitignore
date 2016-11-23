@@ -1,11 +1,8 @@
+# Ignore all the Pycharm IDE files.
 .idea/
 
-TreeSerialize/TreeSerialize.pyc
-TreeSerialize/__init__.pyc
-TreeSerialize/__pycache__/
-py_functions/sched.pyc
+# Ignore all files in py_functions directory.
+py_functions/
 
+# Ignore all .pyc files
 *.pyc
-
-
-
