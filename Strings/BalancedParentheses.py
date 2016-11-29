@@ -1,5 +1,3 @@
-from utils.timer import timing
-
 
 class Solution(object):
 
@@ -7,7 +5,6 @@ class Solution(object):
         self.opening = '({['
         self.closing = ')}]'
 
-    @timing
     def paranthesisChecker(self, str):
 
         s = []
@@ -26,10 +23,8 @@ class Solution(object):
                         flag = False
             i += 1
         if flag and len(s) == 0:
-            print("YES")
             return True
         else:
-            print("NO")
             return False
 
 if __name__ == '__main__':
