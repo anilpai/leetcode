@@ -1,5 +1,7 @@
 '''
 Index of first unique character occured in a string.
+
+Tip : Better way to implement using Ordered Dict
 '''
 
 

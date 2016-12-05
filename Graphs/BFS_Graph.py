@@ -1,6 +1,4 @@
 from collections import defaultdict
-from turtle import *
-
 
 class Graph(object):
 

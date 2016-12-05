@@ -81,6 +81,20 @@ class Solution(object):
             nums[abs(n) - 1] = -abs(nums[abs(n) - 1])
         return [i + 1 for i, n in enumerate(nums) if n > 0]
 
+    def subset_sum(self, numbers, target, partial=[]):
+
+        s = sum(partial)
+
+        if s == target:
+            print("(%s)=%s" % (partial, target))
+        if s >= target:
+            return
+
+        for i in range(len(numbers)):
+            n = numbers[i]
+            remaining = numbers[i + 1:]
+            self.subset_sum(remaining, target, partial + [n])
+
 
 if __name__=='__main__':
     s = Solution()
@@ -109,3 +123,5 @@ if __name__=='__main__':
 
     a = [4, 3, 2, 7, 8, 2, 3, 1]
     print(s.findMissingNumbers(a))
+
+    s.subset_sum([1, 2, 3, 9, 8, 4, 5, 7, 10], 13)
