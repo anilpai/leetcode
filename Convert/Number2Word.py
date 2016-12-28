@@ -52,7 +52,7 @@ class Solution(object):
 
         word += self.num2word((n % 100), "")
 
-        return word
+        return word.strip()
 
 
 if __name__ == '__main__':
