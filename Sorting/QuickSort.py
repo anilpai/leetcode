@@ -11,16 +11,13 @@ class Solution(object):
 
     def partition(self, a, first, last):
         pivot = first + random.randrange(last - first + 1)
-        self.swap(a, pivot, last)
+        a[pivot], a[last] = a[last], a[pivot]
         for i in range(first, last):
             if a[i] <= a[last]:
-                self.swap(a, i, first)
+                a[i], a[first] = a[first], a[i]
                 first += 1
-        self.swap(a, first, last)
+        a[first], a[last] = a[last], a[first]
         return first
-
-    def swap(self, a, x, y):
-        a[x], a[y] = a[y], a[x]
 
 
 if __name__=='__main__':

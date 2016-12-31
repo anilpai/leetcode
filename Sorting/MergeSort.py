@@ -1,27 +1,20 @@
 class Solution(object):
 
-    def merge_sort(self, lst):
-        """Sorts the input list using the merge sort algorithm.
-
-        >>> lst = [4, 5, 1, 6, 3]
-        >>> merge_sort(lst)
-        [1, 3, 4, 5, 6]
+    def merge_sort(self, l):
         """
-        if len(lst) <= 1:
-            return lst
-        mid = len(lst) // 2
-        left = self.merge_sort(lst[:mid])
-        right = self.merge_sort(lst[mid:])
+        Sorts the input list using the merge sort algorithm.
+        """
+        if len(l) <= 1:
+            return l
+        mid = len(l) // 2
+        left = self.merge_sort(l[:mid])
+        right = self.merge_sort(l[mid:])
         return self.merge(left, right)
 
     def merge(self, left, right):
-        """Takes two sorted lists and returns a single sorted list by comparing the
+        """
+        Takes two sorted lists and returns a single sorted list by comparing the
         elements one at a time.
-
-        >>> left = [1, 5, 6]
-        >>> right = [2, 3, 4]
-        >>> merge(left, right)
-        [1, 2, 3, 4, 5, 6]
         """
         if not left:
             return right

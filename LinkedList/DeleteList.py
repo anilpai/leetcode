@@ -2,7 +2,6 @@
 import random
 
 
-
 class ListNode(object):
     """
     Singly Linked List Node with a value and next pointer
@@ -17,24 +16,13 @@ class ListNode(object):
 
 class Solution(object):
     """
-    Solution to the problem of reversing singly linked list
+    Delete a node at a particular position (RECURSIVELY) of a singly linked list
     """
-
-    def ReverseList2(self, head):
-        '''
-        Recursively reverse.
-        '''
-        if head is not None:
-            self.ReverseList2(head.next)
-            print(head.val)
-
-    def ReverseList(self, head):
-        prev, curr = None, head
-
-        while curr:
-            prev, curr.next, curr = curr, prev, curr.next
-
-        return prev
+    def DeleteList(self, head, position):
+        if position == 0:
+            return head.next
+        head.next = self.DeleteList(head.next, position - 1)
+        return head
 
     def createLinkedList(self, ll):
 
@@ -71,8 +59,8 @@ if __name__ == '__main__':
     ll = random.sample(range(300), 6)
     s = Solution()
     head = s.createLinkedList(ll)
-    print("Before reordering: ")
+    print("Before deleting: ")
     s.printLinkedList(head)
-    head = s.ReverseList(head)
-    print("After reversing: ")
+    head = s.DeleteList(head, 4)
+    print("After deleting: ")
     s.printLinkedList(head)

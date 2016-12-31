@@ -2,7 +2,6 @@
 import random
 
 
-
 class ListNode(object):
     """
     Singly Linked List Node with a value and next pointer
@@ -17,24 +16,30 @@ class ListNode(object):
 
 class Solution(object):
     """
-    Solution to the problem of reversing singly linked list
+    Insert a node at a particular position of a singly linked list
     """
+    def InsertList(self, head, val, position):
 
-    def ReverseList2(self, head):
-        '''
-        Recursively reverse.
-        '''
-        if head is not None:
-            self.ReverseList2(head.next)
-            print(head.val)
+        d = ListNode(val)
+        # if the head is NULL
+        if head is None:
+            head = d
+            return head
 
-    def ReverseList(self, head):
-        prev, curr = None, head
+        # if the position is ZERO
+        if position == 0:
+            d.next = head
+            head = d
+            return head
 
-        while curr:
-            prev, curr.next, curr = curr, prev, curr.next
+        curr = head
+        while position - 1:
+            curr = curr.next
+            position -= 1
 
-        return prev
+        d.next = curr.next
+        curr.next = d
+        return head
 
     def createLinkedList(self, ll):
 
@@ -71,8 +76,8 @@ if __name__ == '__main__':
     ll = random.sample(range(300), 6)
     s = Solution()
     head = s.createLinkedList(ll)
-    print("Before reordering: ")
+    print("Before inserting: ")
     s.printLinkedList(head)
-    head = s.ReverseList(head)
-    print("After reversing: ")
+    head = s.InsertList(head, 20, 4)
+    print("After inserting: ")
     s.printLinkedList(head)
