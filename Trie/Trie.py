@@ -38,6 +38,7 @@ class Trie(object):
 
         return curr.words_count
 
+
 if __name__ == '__main__':
     t = Trie()
     t.add('and')
