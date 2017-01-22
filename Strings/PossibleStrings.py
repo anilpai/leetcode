@@ -23,9 +23,21 @@ class Solution(object):
             right = s[i + 1:]
             self.printUniqueCombinations(right, partial + [left])
 
+    def permute(self, a, l, r):
+        if l == r:
+            print(''.join(a))
+        else:
+            for i in range(l, r+1):
+                a[l], a[i] = a[i], a[l]
+                self.permute(a, l+1, r)
+                a[l], a[i] = a[i], a[l]
+
+
 if __name__=='__main__':
     solution = Solution()
     s = 'abcd'
     k = 3
     solution.printAllStringsK(s, '', len(s), k)
     solution.printUniqueCombinations(s)
+    a = list(s)
+    solution.permute(a, 0, len(a)-1)
