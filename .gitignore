@@ -1,3 +1,7 @@
+# Ignore few files with errors
+
+Strings/WordLadder.py
+
 # Ignore all the Pycharm IDE files.
 .idea/
 
@@ -6,3 +10,19 @@ py_functions/
 
 # Ignore all .pyc files
 *.pyc
+Arrays/__pycache__/
+BalancedBT/__pycache__/
+Combionatrics/__pycache__/
+Convert/__pycache__/
+Graphs/__pycache__/
+KNearestPoints/__pycache__/
+LinkedList/__pycache__/
+LongestPath/__pycache__/
+Matrix/__pycache__/
+Sorting/__pycache__/
+Strings/__pycache__/
+Tests/__pycache__/
+TreeSerialize/__pycache__/
+TreeTraversals/__pycache__/
+Trie/__pycache__/
+utils/__pycache__/

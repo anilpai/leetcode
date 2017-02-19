@@ -14,6 +14,6 @@ class Solution(object):
 
 if __name__=='__main__':
     s = Solution()
-    strings = ['aabcccccaaa', 'aaaaaaa']
+    strings = ['aabcccccaaad', 'aaaaaaa']
     for string in strings:
         print(s.compress(string))
