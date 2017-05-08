@@ -2,7 +2,6 @@
 import random
 
 
-
 class ListNode(object):
     """
     Singly Linked List Node with a value and next pointer

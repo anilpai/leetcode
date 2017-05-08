@@ -1,4 +1,4 @@
-from TreeSerialize.TreeSerialize import serialize, deserialize, drawtree , TreeNode
+from TreeSerialize.TreeSerialize import serialize, deserialize, drawtree, TreeNode
 
 '''
 Needs Python 3+
