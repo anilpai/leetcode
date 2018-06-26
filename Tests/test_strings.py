@@ -6,6 +6,8 @@ from Strings.KthUniqChar import Solution as S3
 from Strings.FirstUniqueChar import Solution as S4
 from Strings.LCS import Solution as S5
 from Strings.NumOfPalindromes import Solution as S6
+from Strings.ShuntingYard import Solution as S7
+
 
 class TestSolution(TestCase):
     def test_paranthesisChecker(self):
@@ -54,3 +56,8 @@ class TestSolution(TestCase):
         self.assertListEqual(sorted(r.allPalindromes(s1)), sorted(['aceca', 'ele', 'ala', 'aya', 'cec', 'malayalam', 'ere', 'layal', 'alayala', 'racecar']))
         self.assertListEqual(sorted(r.allPalindromes(s2)), sorted(['murderforajarofredrum', 'rajar', 'urderforajarofredru', 'forajarof', 'aja', 'rderforajarofredr', 'erforajarofre', 'derforajarofred', 'rforajarofr', 'orajaro']))
         self.assertListEqual(sorted(r.allPalindromes(s3)), sorted(['zyratinasanitaryz', 'yratinasanitary', 'ozyratinasanitaryzo', 'oozyratinasanitaryzoo', 'inasani', 'ratinasanitar', 'atinasanita', 'oo', 'asa', 'tinasanit', 'nasan']))
+
+    def test_ShuntingYard(self):
+        r = S7()
+        e1 = '((20 - 10 ) * (30 - 20) / 10 + 10 ) * 2'
+        self.assertEqual(r.evaluate(e1), eval(e1), 'Incorrect')

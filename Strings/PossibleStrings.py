@@ -41,3 +41,6 @@ if __name__=='__main__':
     solution.printUniqueCombinations(s)
     a = list(s)
     solution.permute(a, 0, len(a)-1)
+    s = '+-'
+    k = 3
+    solution.printAllStringsK(s, '', len(s), k)
