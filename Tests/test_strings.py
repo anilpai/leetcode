@@ -7,6 +7,8 @@ from Strings.FirstUniqueChar import Solution as S4
 from Strings.LCS import Solution as S5
 from Strings.NumOfPalindromes import Solution as S6
 from Strings.ShuntingYard import Solution as S7
+from Strings.LongestCommonPrefix import Solution as S8
+from Strings.BuddyStrings import Solution as S9
 
 
 class TestSolution(TestCase):
@@ -20,12 +22,12 @@ class TestSolution(TestCase):
         r = S1()
         s = ['a', 'b', 'c', 'd']
         k = 3
-        self.assertEqual(r.printAllStringsK(s, '', len(s), k), None,'Printed all string')
+        self.assertEqual(r.printAllStringsK(s, '', len(s), k), None, 'Printed all string')
 
     def test_firstUniqueChar(self):
         r = S2()
         s = 'abcac'
-        self.assertEqual(r.firstUniqueChar(s),1, 'First Unique char')
+        self.assertEqual(r.firstUniqueChar(s), 1, 'First Unique char')
 
     def test_KthUniqChar(self):
         r = S3()
@@ -61,3 +63,28 @@ class TestSolution(TestCase):
         r = S7()
         e1 = '((20 - 10 ) * (30 - 20) / 10 + 10 ) * 2'
         self.assertEqual(r.evaluate(e1), eval(e1), 'Incorrect')
+
+    def test_LCP(self):
+        r = S8()
+        input1 = ["flower", "flow", "flight"]
+        input2 = ["dog", "racecar", "car"]
+        self.assertEqual(r.longestCommonPrefix(input1), "fl")
+        self.assertEqual(r.longestCommonPrefix(input2), "")
+
+    def test_buddyStrings(self):
+        r = S9()
+        A = "ab"
+        B = "ba"
+        self.assertEqual(r.buddyStrings(A, B), True)
+        A = "ab"
+        B = "ab"
+        self.assertEqual(r.buddyStrings(A, B), False)
+        A = "aa"
+        B = "aa"
+        self.assertEqual(r.buddyStrings(A, B), True)
+        A = "aaaaaaabc"
+        B = "aaaaaaacb"
+        self.assertEqual(r.buddyStrings(A, B), True)
+        A = ""
+        B = "aa"
+        self.assertEqual(r.buddyStrings(A, B), False)
