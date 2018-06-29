@@ -13,40 +13,13 @@ class Solution(object):
         :rtype: str
         """
 
-        if len(strs) == 0:
-            return ""
-        elif len(strs) == 1:
-            return strs[0]
-
-        mins = min(strs, key=len)
-        n, i = len(mins), 0
-        while i < len(strs):
-            if mins[:n] != strs[i][:n]:
-                n -= 1
-                i = 0
+        prefix = ''
+        for c in zip(*strs):
+            if len(set(c)) == 1:
+                prefix += c[0]
             else:
-                i += 1
-        return mins[:n]
-
-    def longestCommonPrefix2(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: str
-        """
-        if len(strs) == 0:
-            return ""
-        if len(strs) == 1:
-            return strs[0]
-        short_word = min(strs, key=len)
-        answer = ""
-        i = 0
-        for letter in short_word:
-            for word in strs:
-                if word[i] != letter:
-                    return answer
-            answer = answer + letter
-            i = i+1
-        return answer
+                break
+        return prefix
 
 
 if __name__=='__main__':
