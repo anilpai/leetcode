@@ -95,6 +95,13 @@ class Solution(object):
             remaining = numbers[i + 1:]
             self.subset_sum(remaining, target, partial + [n])
 
+    def two_sum(self, nums, target):
+        nums_hash = {}
+        for i in range(len(nums)):
+            if target - nums[i] in nums_hash:
+                return [nums_hash[target - nums[i]], i]
+            nums_hash[nums[i]] = i
+
 
 if __name__=='__main__':
     s = Solution()
@@ -125,3 +132,7 @@ if __name__=='__main__':
     print(s.findMissingNumbers(a))
 
     s.subset_sum([1, 2, 3, 9, 8, 4, 5, 7, 10], 13)
+
+    a = [2, 7, 11, 15]
+    target = 9
+    print(s.two_sum(a, target))

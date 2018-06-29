@@ -10,6 +10,7 @@ from Strings.ShuntingYard import Solution as S7
 from Strings.LongestCommonPrefix import Solution as S8
 from Strings.BuddyStrings import Solution as S9
 from Strings.LetterCombinationsPhoneNumber import Solution as S10
+from Strings.LengthOfLongestSubstring import Solution as S11
 
 
 class TestSolution(TestCase):
@@ -93,3 +94,9 @@ class TestSolution(TestCase):
     def test_letterCombinations(self):
         r = S10()
         self.assertListEqual(r.letterCombinations("23"), ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"])
+
+    def test_lengthOfLongestSubstring(self):
+        r = S11()
+        self.assertEqual(r.lengthOfLongestSubstring('abcabcbb'), 3)
+        self.assertEqual(r.lengthOfLongestSubstring('bbbbb'), 1)
+        self.assertEqual(r.lengthOfLongestSubstring('pwwkew'), 3)
