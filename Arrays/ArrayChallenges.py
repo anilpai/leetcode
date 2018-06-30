@@ -102,6 +102,41 @@ class Solution(object):
                 return [nums_hash[target - nums[i]], i]
             nums_hash[nums[i]] = i
 
+    def subarraySum_EqualsK_Count(self, nums, k):
+        d, count, sum = {0: 1}, 0, 0
+        for n in nums:
+            sum += n
+            if sum-k in d:
+                count+= d[sum-k]
+            d[sum] = d.get(sum, 0)+1
+        return count
+
+    def subarraySum_EqualsK(self, nums, k):
+        d, count, sum = {0: 1}, 0, 0
+        for n in nums:
+            sum += n
+            if sum-k in d:
+                return True
+            d[sum] = d.get(sum, 0)+1
+        return False
+
+    def checkSubarraySum_MultipleOfK(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: bool
+        """
+        d = {0: -1}
+        t = 0
+        for i in range(len(nums)):
+            t += nums[i]
+            temp = t % k if k else t
+            if temp in d and i - d[temp] > 1:
+                return True
+            if temp not in d:
+                d[temp] = i
+        return False
+
 
 if __name__=='__main__':
     s = Solution()
@@ -136,3 +171,27 @@ if __name__=='__main__':
     a = [2, 7, 11, 15]
     target = 9
     print(s.two_sum(a, target))
+
+    arr = [23, 2, 4, 6, 7]
+    target = 6
+    print(s.subarraySum_EqualsK_Count(arr, target))
+
+    arr = [23, 2, 6, 4, 7]
+    target = 6
+    print(s.subarraySum_EqualsK_Count(arr, target))
+
+    arr = [23, 2, 4, 6, 7]
+    target = 7
+    print(s.subarraySum_EqualsK(arr, target))
+
+    arr = [23, 2, 6, 4, 7]
+    target = 6
+    print(s.subarraySum_EqualsK(arr, target))
+
+    arr = [23, 2, 4, 6, 7]
+    target = 6
+    print(s.checkSubarraySum_MultipleOfK(arr, target))
+
+    arr = [23, 2, 6, 4, 7]
+    target = 6
+    print(s.checkSubarraySum_MultipleOfK(arr, target))
