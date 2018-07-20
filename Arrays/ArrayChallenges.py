@@ -137,6 +137,25 @@ class Solution(object):
                 d[temp] = i
         return False
 
+    """
+    Given a binary array, find the maximum length of a contiguous subarray with equal number of 0 and 1.
+    """
+    def findMaxLength(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        result, count = 0, 0
+        lookup = {0: -1}
+        for i, num in enumerate(nums):
+            count += 1 if num == 1 else -1
+            if count in lookup:
+                result = max(result, i - lookup[count])
+            else:
+                lookup[count] = i
+
+        return result
+
 
 if __name__=='__main__':
     s = Solution()
@@ -181,7 +200,7 @@ if __name__=='__main__':
     print(s.subarraySum_EqualsK_Count(arr, target))
 
     arr = [23, 2, 4, 6, 7]
-    target = 7
+    target = 23
     print(s.subarraySum_EqualsK(arr, target))
 
     arr = [23, 2, 6, 4, 7]
@@ -189,9 +208,15 @@ if __name__=='__main__':
     print(s.subarraySum_EqualsK(arr, target))
 
     arr = [23, 2, 4, 6, 7]
-    target = 6
+    target = 19
     print(s.checkSubarraySum_MultipleOfK(arr, target))
 
     arr = [23, 2, 6, 4, 7]
-    target = 6
+    target = 5
     print(s.checkSubarraySum_MultipleOfK(arr, target))
+
+    arr = [0,1]
+    print(s.findMaxLength(arr))
+
+    arr = [0 ,0, 1, 0,1,0]
+    print(s.findMaxLength(arr))
